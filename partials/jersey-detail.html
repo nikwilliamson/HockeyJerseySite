@@ -1,0 +1,111 @@
+<div class="jersey-images">
+    <img ng-src="{{img}}" class="jersey" ng-repeat="img in jersey.images" ng-class="{active: mainImageUrl==img}">
+</div>
+<h1>{{jersey.name}}</h1>
+<p>{{jersey.description}}</p>
+<ul class="jersey-thumbs">
+    <li ng-repeat="img in jersey.images">
+        <img ng-src="{{img}}" ng-click="setImage(img)">
+    </li>
+</ul>
+<ul class="specs">
+    <li>
+        <span>Availability and Networks</span>
+        <dl>
+            <dt>Availability</dt>
+            <dd ng-repeat="availability in jersey.availability">{{availability}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Battery</span>
+        <dl>
+            <dt>Type</dt>
+            <dd>{{jersey.battery.type}}</dd>
+            <dt>Talk Time</dt>
+            <dd>{{jersey.battery.talkTime}}</dd>
+            <dt>Standby time (max)</dt>
+            <dd>{{jersey.battery.standbyTime}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Storage and Memory</span>
+        <dl>
+            <dt>RAM</dt>
+            <dd>{{jersey.storage.ram}}</dd>
+            <dt>Internal Storage</dt>
+            <dd>{{jersey.storage.flash}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Connectivity</span>
+        <dl>
+            <dt>Network Support</dt>
+            <dd>{{jersey.connectivity.cell}}</dd>
+            <dt>WiFi</dt>
+            <dd>{{jersey.connectivity.wifi}}</dd>
+            <dt>Bluetooth</dt>
+            <dd>{{jersey.connectivity.bluetooth}}</dd>
+            <dt>Infrared</dt>
+            <dd>{{jersey.connectivity.infrared | checkmark}}</dd>
+            <dt>GPS</dt>
+            <dd>{{jersey.connectivity.gps | checkmark}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Android</span>
+        <dl>
+            <dt>OS Version</dt>
+            <dd>{{jersey.android.os}}</dd>
+            <dt>UI</dt>
+            <dd>{{jersey.android.ui}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Size and Weight</span>
+        <dl>
+            <dt>Dimensions</dt>
+            <dd ng-repeat="dim in jersey.sizeAndWeight.dimensions">{{dim}}</dd>
+            <dt>Weight</dt>
+            <dd>{{jersey.sizeAndWeight.weight}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Display</span>
+        <dl>
+            <dt>Screen size</dt>
+            <dd>{{jersey.display.screenSize}}</dd>
+            <dt>Screen resolution</dt>
+            <dd>{{jersey.display.screenResolution}}</dd>
+            <dt>Touch screen</dt>
+            <dd>{{jersey.display.touchScreen | checkmark}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Hardware</span>
+        <dl>
+            <dt>CPU</dt>
+            <dd>{{jersey.hardware.cpu}}</dd>
+            <dt>USB</dt>
+            <dd>{{jersey.hardware.usb}}</dd>
+            <dt>Audio / headjersey jack</dt>
+            <dd>{{jersey.hardware.audioJack}}</dd>
+            <dt>FM Radio</dt>
+            <dd>{{jersey.hardware.fmRadio | checkmark}}</dd>
+            <dt>Accelerometer</dt>
+            <dd>{{jersey.hardware.accelerometer | checkmark}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Camera</span>
+        <dl>
+            <dt>Primary</dt>
+            <dd>{{jersey.camera.primary}}</dd>
+            <dt>Features</dt>
+            <dd>{{jersey.camera.features.join(', ')}}</dd>
+        </dl>
+    </li>
+    <li>
+        <span>Additional Features</span>
+        <dd>{{jersey.additionalFeatures}}</dd>
+    </li>
+</ul>

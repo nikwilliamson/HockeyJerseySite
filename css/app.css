@@ -1,0 +1,136 @@
+/* app css stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+h3{margin:3% 0;}
+
+.jersey-images {}
+
+.jerseys {
+    padding: 2%;
+    list-style: none;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.thumb {}
+
+.jerseys li {
+    width: 29%;
+    float: left;
+    background: #fff;
+    border: 1px solid #eee;
+    margin: 2%;
+    padding: 2%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.05);
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+}
+
+img.jersey-preview{
+    width:100%;
+}
+
+.preview-details{
+    line-height:1.25em
+
+}
+.preview-details p{font-size: 12px;}
+/** Detail View **/
+
+img.jersey {
+    display: -webkit-flex;
+    width: 100%;
+}
+
+img.jersey:first-child {}
+
+ul.jersey-thumbs {}
+
+ul.jersey-thumbs li {}
+
+ul.jersey-thumbs img {}
+
+ul.jersey-thumbs img:hover {}
+
+ul.specs {}
+
+ul.specs > li {}
+
+ul.specs > li > span {}
+
+ul.specs dt {}
+
+h1 {}
+
+header {
+    height: 64px;
+    background: #3a3db4;
+    display: flex;
+    display: -webkit-flex;
+    padding: 12px 24px;
+    color: #fff;
+}
+
+header h1 {
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+nav ul {
+    list-style: none;
+    flex: 1;
+    -webkit-flex: 1;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 32px;
+}
+
+nav {
+    -webkit-align-self: center;
+    align-self: center;
+}
+
+.view-container {
+    display: flex;
+    display: -webkit-flex;
+    margin: 2%;
+    background-color: #f1f1f1;
+}
+
+.view-frame {
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.filters {
+    height: 48px;
+    width: 100%;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+    background: #fff;
+    padding: 12px 5%;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.jersey-container {
+    background: #f2f2f2;
+    margin: 0 5% 5%
+}
